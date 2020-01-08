@@ -1,7 +1,7 @@
 import React from 'react';
-// import PatternButton from './PatternButton';
-// import ColorButton from './ColorButton';
-import Button from './Button';
+import PatternButton from './PatternButton';
+import ColorButton from './ColorButton';
+// import Button from './Button';
 import PropTypes from 'prop-types';
 
 class ButtonContainer extends React.Component {
@@ -9,28 +9,17 @@ class ButtonContainer extends React.Component {
     super(props);
   }
 
-  // setCustomer = (customer) => {
-  //   this.props.setCustomerCallback(customer);
-  // }
-
   makeButtonCollection () {
-    const buttonCollection = this.props.buttonNames.map((button, i) => {
-      return <Button
-        color={button}
-        // customerId={customer.id}
-        // registeredAt={customer.registered_at}
-        // address={customer.address}
-        // city={customer.city}
-        // state={customer.state}
-        // postal_code={customer.postal_code}
-        // phone={customer.phone}
-        // accountCredit={customer.account_credit}
-        // moviesCheckedOutCount={customer.movies_checked_out_count}
-        // selectCustomerCallback={this.props.setCustomerCallback}
-        // key={i}
-      />;
-      }
-    );
+    var buttonCollection
+    if (this.props.type === "pattern") {
+      buttonCollection = this.props.buttonLabels.map((label, i) => {
+        return <PatternButton pattern={label}/>
+      });
+    } else if (this.props.type === "color") {
+      buttonCollection = this.props.buttonLabels.map((label, i) => {
+        return <ColorButton color={label}/>
+      });
+    } 
 
     return buttonCollection;
   }
@@ -40,9 +29,7 @@ class ButtonContainer extends React.Component {
       <div>
       <h3>{this.props.containerName}: select a button below to choose a {this.props.type}!</h3>
       
-    
-        {this.makeButtonCollection()}
-        {/* <Button color="hello"/> */}
+      {this.makeButtonCollection()}
     
       </div>
     );
@@ -50,10 +37,9 @@ class ButtonContainer extends React.Component {
 };
 
 ButtonContainer.propTypes = {
-  // setCustomerCallback: PropTypes.func.isRequired,
   containerName: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
-  buttonNames: PropTypes.array.isRequired,
+  buttonLabels: PropTypes.array.isRequired,
 };
 
 export default ButtonContainer;
