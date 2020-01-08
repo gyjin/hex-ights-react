@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
 import ButtonContainer from './components/ButtonContainer';
 
-function App() {
+class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      selectedPattern: "",
+      selectedColor: "",
+    };    
+  }
+
+  render() {
   return (
     <div className="App">
       <header>
@@ -13,6 +23,7 @@ function App() {
       <ButtonContainer containerName="Colors" type="color" buttonNames={["red", "yellow"]}/>
     </div>
   );
+}
 }
 
 export default App;
