@@ -16,19 +16,19 @@ class App extends Component {
     };    
   }
 
-  // componentDidMount() {
-  //   const patternUrl = 'https://hex-ights.firebaseio.com/pattern.json?auth=' + process.env.FB_AUTH_KEY
+  componentDidMount() {
+    const patternUrl = `https://hex-ights.firebaseio.com/pattern.json?auth=` + process.env.REACT_APP_FB_AUTH_KEY
     
 
-  //   axios.get(patternUrl).then((response) => {
-  //     this.setState({
-  //       selectedPattern: response.data,
-  //     });
-  //   })
-  //   .catch((error) => {
-  //     this.setState({patternError: error.message });    
-  //   });
-  // }
+    axios.get(patternUrl).then((response) => {
+      this.setState({
+        selectedPattern: response.data,
+      });
+    })
+    .catch((error) => {
+      this.setState({patternError: error.message });    
+    });
+  }
 
   render() {
     return (
@@ -46,7 +46,6 @@ class App extends Component {
         <p>{this.state.patternError}</p>
         {/* <p>{this.state.selectedColor}</p>
         <p>{this.state.colorError}</p> */}
-        <p>{process.env.REACT_APP_FB_AUTH_KEY}hi</p>
       </div>
 
     );
