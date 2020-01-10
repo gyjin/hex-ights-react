@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './App.css';
 import ButtonContainer from './components/ButtonContainer';
 import axios from 'axios';
-// import { FB_AUTH_KEY } from 'react-dotenv';
 
 class App extends Component {
   constructor(props) {
@@ -11,14 +10,17 @@ class App extends Component {
     this.state = {
       selectedPattern: "hello",
       patternError: "",
-      selectedColor: "",
-      colorError: "",
+      red: "",
+      green: "",
+      blue: "",
+      redError: "",
+      greenError: "",
+      blueError: "",
     };    
   }
 
   componentDidMount() {
     const patternUrl = `https://hex-ights.firebaseio.com/pattern.json?auth=` + process.env.REACT_APP_FB_AUTH_KEY
-    
 
     axios.get(patternUrl).then((response) => {
       this.setState({
@@ -27,6 +29,17 @@ class App extends Component {
     })
     .catch((error) => {
       this.setState({patternError: error.message });    
+    });
+
+    const redUrl = `https://hex-ights.firebaseio.com/red.json?auth=` + process.env.REACT_APP_FB_AUTH_KEY
+
+    axios.get(redUrl).then((response) => {
+      this.setState({
+        red: response.data,
+      });
+    })
+    .catch((error) => {
+      this.setState({redError: error.message });    
     });
   }
 
@@ -44,8 +57,8 @@ class App extends Component {
 
         <p>{this.state.selectedPattern}</p>
         <p>{this.state.patternError}</p>
-        {/* <p>{this.state.selectedColor}</p>
-        <p>{this.state.colorError}</p> */}
+        <p>{this.state.red}</p>
+        <p>{this.state.redError}</p>
       </div>
 
     );

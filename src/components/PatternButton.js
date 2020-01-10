@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const PatternButton = (props) => {
   
   return (
-    <div>this is a pattern button. the pattern is {props.pattern}</div>
+    <button>this is a pattern button. the pattern is {props.pattern}</button>
   );
 };
 
