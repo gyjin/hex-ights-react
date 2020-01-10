@@ -22,6 +22,7 @@ const ColorButton = (props) => {
 
 ColorButton.propTypes = {
   color: PropTypes.string.isRequired,
+  rgb: PropTypes.array.isRequired,
 };
 
 export default ColorButton;
