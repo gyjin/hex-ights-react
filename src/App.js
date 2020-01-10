@@ -53,7 +53,7 @@ class App extends Component {
         {/* add an on/off button here */}
 
         <ButtonContainer containerName="Patterns" type="pattern" buttonLabels={["blink", "wave"]}/>
-        <ButtonContainer containerName="Colors" type="color" buttonLabels={["red", "green", "blue"]}/>
+        <ButtonContainer containerName="Colors" type="color" buttonLabels={{"red": [255, 0, 0], "green": [0, 255, 0], "blue": [0, 0, 255]}}/>
 
         <p>{this.state.selectedPattern}</p>
         <p>{this.state.patternError}</p>

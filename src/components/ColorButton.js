@@ -5,12 +5,12 @@ import axios from 'axios';
 const ColorButton = (props) => {
 
   const changeColor = () => {
-    axios.patch(`https://hex-ights.firebaseio.com/.json?auth=` + process.env.REACT_APP_FB_AUTH_KEY, {"red": 3})
+    axios.patch(`https://hex-ights.firebaseio.com/.json?auth=` + process.env.REACT_APP_FB_AUTH_KEY, {"red": props.rgb[0], "green": props.rgb[1], "blue": props.rgb[2]})
       .then((response) => {
-          console.log("successfully changed number")
+          console.log(`successfully changed color to ` + props.color)
       })
       .catch((error) => {
-          console.log("did not change number")
+          console.log(`color was not successfully changed to ` + props.color)
       });
   }
   

@@ -9,16 +9,23 @@ class ButtonContainer extends React.Component {
     super(props);
   }
 
+  // for(var index in items) {
+  //   document.write( index + " : " + items[index] + "<br />");
+  // }
+
   makeButtonCollection () {
-    var buttonCollection
+    var buttonCollection = [];
     if (this.props.type === "pattern") {
       buttonCollection = this.props.buttonLabels.map((label, i) => {
         return <PatternButton pattern={label}/>
       });
     } else if (this.props.type === "color") {
-      buttonCollection = this.props.buttonLabels.map((label, i) => {
-        return <ColorButton color={label}/>
-      });
+      // buttonCollection = this.props.buttonLabels.map(key, value, i) => {
+      //   return <ColorButton color={key} rbg={index}/>
+      // });
+      for(var index in this.props.buttonLabels) {
+          buttonCollection.push( <ColorButton color={index} rgb={this.props.buttonLabels[index]} /> )
+      }
     } 
 
     return buttonCollection;
