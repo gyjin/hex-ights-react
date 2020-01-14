@@ -15,7 +15,7 @@ const PatternButton = (props) => {
   }
 
   return (
-    <button onClick={changePattern}>this is a pattern button. the pattern is {props.pattern}</button>
+    <button onClick={changePattern}>{props.pattern}</button>
   );
 };
 

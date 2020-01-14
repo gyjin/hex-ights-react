@@ -9,10 +9,6 @@ class ButtonContainer extends React.Component {
     super(props);
   }
 
-  // for(var index in items) {
-  //   document.write( index + " : " + items[index] + "<br />");
-  // }
-
   makeButtonCollection () {
     var buttonCollection = [];
     if (this.props.type === "pattern") {
@@ -20,9 +16,6 @@ class ButtonContainer extends React.Component {
         return <PatternButton pattern={label}/>
       });
     } else if (this.props.type === "color") {
-      // buttonCollection = this.props.buttonLabels.map(key, value, i) => {
-      //   return <ColorButton color={key} rbg={index}/>
-      // });
       for(var index in this.props.buttonLabels) {
           buttonCollection.push( <ColorButton color={index} rgb={this.props.buttonLabels[index]} /> )
       }
@@ -46,7 +39,7 @@ class ButtonContainer extends React.Component {
 ButtonContainer.propTypes = {
   containerName: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
-  buttonLabels: PropTypes.array.isRequired,
+  buttonLabels: PropTypes.any.isRequired,
 };
 
 export default ButtonContainer;

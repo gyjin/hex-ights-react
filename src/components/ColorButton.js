@@ -16,7 +16,7 @@ const ColorButton = (props) => {
   
 
   return (
-    <button onClick={changeColor}>this is a color button. the color is {props.color}</button>
+    <button onClick={changeColor}>{props.color}</button>
   );
 };
 
