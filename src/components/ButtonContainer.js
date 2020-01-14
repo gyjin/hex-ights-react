@@ -10,15 +10,15 @@ class ButtonContainer extends React.Component {
   }
 
   makeButtonCollection () {
-    var buttonCollection
+    var buttonCollection = [];
     if (this.props.type === "pattern") {
       buttonCollection = this.props.buttonLabels.map((label, i) => {
         return <PatternButton pattern={label}/>
       });
     } else if (this.props.type === "color") {
-      buttonCollection = this.props.buttonLabels.map((label, i) => {
-        return <ColorButton color={label}/>
-      });
+      for(var index in this.props.buttonLabels) {
+          buttonCollection.push( <ColorButton color={index} rgb={this.props.buttonLabels[index]} /> )
+      }
     } 
 
     return buttonCollection;
@@ -39,7 +39,7 @@ class ButtonContainer extends React.Component {
 ButtonContainer.propTypes = {
   containerName: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
-  buttonLabels: PropTypes.array.isRequired,
+  buttonLabels: PropTypes.any.isRequired,
 };
 
 export default ButtonContainer;
