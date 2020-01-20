@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
 import ButtonContainer from './components/ButtonContainer';
-import axios from 'axios';
 
 class App extends Component {
   constructor(props) {
     super(props);
+  }
 
   render() {
     return (
@@ -14,16 +14,14 @@ class App extends Component {
           <h1>Hex-ights</h1>
         </header>
 
-        {/* add an on/off button here */}
-
-        <ButtonContainer containerName="Patterns" type="pattern" buttonLabels={["solid", "blink", "wave"]}/>
+        <ButtonContainer containerName="Patterns" type="pattern" buttonLabels={["solid", "blink", "wave", "fade", "twinkle", "run", "off"]}/>
         <ButtonContainer containerName="Colors" type="color" buttonLabels={
-          {"red": [4, 0, 0], 
-          "orange": [4, 1, 0],
-          "yellow": [3, 2, 0], 
-          "green": [0, 4, 0], 
-          "blue": [0, 0, 4], 
-          "purple": [2, 0, 3],
+          {"red": [20, 0, 0], 
+          "orange": [20, 5, 0],
+          "yellow": [20, 12, 0], 
+          "green": [0, 20, 0], 
+          "blue": [0, 0, 20], 
+          "purple": [12, 0, 20],
           }}/>
       </div>
 
