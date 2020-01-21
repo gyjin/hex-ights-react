@@ -27,9 +27,9 @@ class ButtonContainer extends React.Component {
   render () {
     return (
       <div>
-      <h3>{this.props.containerName}: select a button below to choose a {this.props.type}!</h3>
+      <h3>{this.props.containerName}: 
       
-      {this.makeButtonCollection()}
+      {this.makeButtonCollection()} </h3>
     
       </div>
     );
