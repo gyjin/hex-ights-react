@@ -9,11 +9,11 @@ class ButtonContainer extends React.Component {
     var buttonCollection = [];
     if (this.props.type === "pattern") {
       buttonCollection = this.props.buttonLabels.map((label, i) => {
-        return <PatternButton pattern={label}/>
+        return <PatternButton pattern={label} key={i}/>
       });
     } else if (this.props.type === "color") {
       for(var index in this.props.buttonLabels) {
-          buttonCollection.push( <ColorButton color={index} rgb={this.props.buttonLabels[index]} /> )
+          buttonCollection.push( <ColorButton color={index} rgb={this.props.buttonLabels[index]} key={index}/> )
       }
     } 
 
