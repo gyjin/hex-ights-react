@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
+import './PatternButton.css';
 
 const PatternButton = (props) => {
   
@@ -15,7 +16,7 @@ const PatternButton = (props) => {
   }
 
   return (
-    <button onClick={changePattern}>{props.pattern}</button>
+    <button type="button" className="btn btn-outline-light spacing" onClick={changePattern}>{props.pattern}</button>
   );
 };
 
