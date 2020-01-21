@@ -16,7 +16,7 @@ const ColorButton = (props) => {
   
 
   return (
-    <button onClick={changeColor}>{props.color}</button>
+    <button type="button" class={'btn btn-outline-light spacing ' + props.color} onClick={changeColor}>{props.color}</button>
   );
 };
 

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './App.css';
 import ButtonContainer from './components/ButtonContainer';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import hexBackground from './images/hexbackground.jpg'
 
 class App extends Component {
   constructor(props) {
@@ -14,8 +13,8 @@ class App extends Component {
       <div className="App background">
 
         <div class="jumbotron">
-          <h1 class="display-3"><strong>Hex-ights</strong></h1>
-          <hr class="my-4"></hr>
+          <h1 class="display-2"><strong>Hex-ights</strong></h1>
+          <hr class="hr"></hr>
           <p class="lead"><em>light up your life!</em></p>
         </div>
 
