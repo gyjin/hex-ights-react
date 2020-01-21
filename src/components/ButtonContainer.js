@@ -4,9 +4,6 @@ import ColorButton from './ColorButton';
 import PropTypes from 'prop-types';
 
 class ButtonContainer extends React.Component {
-  constructor(props) {
-    super(props);
-  }
 
   makeButtonCollection () {
     var buttonCollection = [];

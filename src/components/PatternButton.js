@@ -16,7 +16,7 @@ const PatternButton = (props) => {
   }
 
   return (
-    <button type="button" class="btn btn-outline-light spacing" onClick={changePattern}>{props.pattern}</button>
+    <button type="button" className="btn btn-outline-light spacing" onClick={changePattern}>{props.pattern}</button>
   );
 };
 

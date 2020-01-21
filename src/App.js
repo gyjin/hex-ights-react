@@ -4,18 +4,15 @@ import ButtonContainer from './components/ButtonContainer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     return (
       <div className="App background">
 
-        <div class="jumbotron">
-          <h1 class="display-2"><strong>Hex-ights</strong></h1>
-          <hr class="hr"></hr>
-          <p class="lead"><em>light up your life!</em></p>
+        <div className="jumbotron">
+          <h1 className="display-2"><strong>Hex-ights</strong></h1>
+          <hr className="hr"></hr>
+          <p className="lead"><em>light up your life!</em></p>
         </div>
 
         <div className="button-container">
