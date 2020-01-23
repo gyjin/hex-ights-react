@@ -38,4 +38,4 @@ This project was deployed with [Google Firebase](https://firebase.google.com/doc
 Follow this [guide](https://www.robinwieruch.de/firebase-deploy-react-js) on how to deploy an existing React application.
 Please `npm build` before deployment. 
 
-Hex-ights is a capstone project developed at Ada Developers Academy in Seattle, WA by Ga-Young Jin. 
+Hex-ights is a capstone project developed at [Ada Developers Academy](https://adadevelopersacademy.org/) in Seattle, WA by Ga-Young Jin. 
