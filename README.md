@@ -3,7 +3,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Hex-ights
 
 Light up your life! Hex-ights are WiFi-controlled customizable led lights for all light enthusiasts. 
-Control the lights from any device that can access the webpage! This is the webpage portion of this project. Please refer to the [hardware portion](https://github.com/gyjin/hex-ights-esp8266/blob/master/README.md) to set up the hardware. 
+Control the lights from any device that can access the webpage! <br />
+This is the webpage portion of this project. Please refer to the [hardware portion](https://github.com/gyjin/hex-ights-esp8266/blob/master/README.md) to set up the hardware. 
 
 ### Installation
 1. Clone this repository.
@@ -37,5 +38,7 @@ You will also see any lint errors in the console.
 This project was deployed with [Google Firebase](https://firebase.google.com/docs/hosting/deploying).
 Follow this [guide](https://www.robinwieruch.de/firebase-deploy-react-js) on how to deploy an existing React application.
 Please `npm build` before deployment. 
+<br />
+<br />
 
 Hex-ights is a capstone project developed at [Ada Developers Academy](https://adadevelopersacademy.org/) in Seattle, WA by Ga-Young Jin. 
